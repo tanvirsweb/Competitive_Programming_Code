@@ -8,6 +8,7 @@ C++ code by [Tanvir Anjom Siddique]()
 
 ### [G_Summation_from_1_to_N](G_Summation_from_1_to_N.cpp)
 
+```cpp
     // for (int i = 1; i <= n; i++) sum += i; // time limit exceed
 
     // cout << (int)(n * (n + 1) / 2) << "\n"; // value>int : wrong ans for wong typecasting
@@ -15,6 +16,7 @@ C++ code by [Tanvir Anjom Siddique]()
     // cout << (long long)(((n + 1) / (double)2.0) * n) << "\n"; wrong ans
 
     cout << n * (n + 1) / 2 << "\n";
+```
 
 1+2
 
@@ -52,8 +54,8 @@ C++ code by [Tanvir Anjom Siddique]()
 
 ### [O_Calculator](O_Calculator.cpp)
 
-    // input:
-    102-34
+```cpp
+    // input: 102-34
 
     //code
     int n1,n2;
@@ -61,6 +63,7 @@ C++ code by [Tanvir Anjom Siddique]()
     cin>>n1>>ch>>n2
 
     // n1=102, ch='-', n2=34
+```
 
 1. `cin>>` will skip over any whitespace characters (such as spaces, tabs, or newlines) when reading input.
    \[here there is no whitespace between inputs. but data type (char) of middle one is different(not int). So, cin>> can differenciate when to stop reading int, when to read char and when to read 2nd int\]
@@ -73,6 +76,7 @@ C++ code by [Tanvir Anjom Siddique]()
 
 #### Take input from string variable
 
+```cpp
     string equ; // "15-150"    size = 5
     cin >> equ;
 
@@ -88,6 +92,7 @@ C++ code by [Tanvir Anjom Siddique]()
     stringstream ss2;
     ss2 << num2;
     ss2 >> num2Int;
+```
 
 ### [X_Two_intervals](X_Two_intervals.cpp)
 
@@ -106,11 +111,13 @@ When you only need the last two digits of a product, you can use the modulus ope
 
 `(a*b*c*d)%100=(( (a%100)*(b%100)*(c%100)*(d%100) )%100)` This approach keeps the intermediate values small and prevents overflow
 
+```cpp
     result = (a % 100) * (b % 100) % 100;
 
     result = result * (c % 100) % 100;
 
     result = result * (d % 100) % 100;
+```
 
 ### [Z_Hard_Compare](Z_Hard_Compare.cpp)
 
@@ -118,6 +125,13 @@ When you only need the last two digits of a product, you can use the modulus ope
 Directly calculating A^B and C^D is impractical because the values of B and D can be as large as 10^12 , and powers of such large numbers can quickly exceed computational limits.
 Instead of calculating the actual powers, we can use logarithms to compare the two expressions. Using logarithms will allow us to handle large powers without overflow.
 
-    double leftSide = B * log(A)
+```cpp
+    double leftSide = B * log(A);
 
     double rightSide = D * log(C);
+
+    if(leftSide > rightSide)
+    {
+        cout << "YES\n";
+    }
+```
