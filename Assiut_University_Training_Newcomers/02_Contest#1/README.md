@@ -8,8 +8,12 @@ clik on below links to get some codes of this contest stored in another folder.
 - [C_Next_Alphabet](../../Phitron_14Days_Coding/C_Next_Alphabet.cpp)
 - [D_Ali_Baba_and_Puzzles](../../Phitron_14Days_Coding/D_Ali_Baba_and_Puzzles.cpp)
 
+## [A_Winter_Sale](A_Winter_Sale.cpp)
+
 ## [E_Interval_Sweep](E_Interval_Sweep.cpp)
 
+<details>
+<summary><i><mark><b>Problem</b></mark></i></summary>
 Find interval [l,l+1,l+2...,r] where, a= number of odd, b= number of even numbers. And Interval should be non-empty. Print YES if such interval exits.
 
 - If `a==0 && b==0` it means that there are `no odd and no even` numbers required. In this case, the interval would be `EMPTY`
@@ -68,6 +72,8 @@ Find interval [l,l+1,l+2...,r] where, a= number of odd, b= number of even number
     }
 ```
 
+</details>
+
 ## [F_Adding_Bits](F_Adding_Bits.cpp)
 
 - a xor b = Bitwise Addition without any carry (always carry =0)
@@ -75,10 +81,13 @@ Find interval [l,l+1,l+2...,r] where, a= number of odd, b= number of even number
 
 ## [G_Katryoshka](G_Katryoshka.cpp)
 
-This repository contains a solution to the Katryoshka problem, in which we need to maximize the number of dolls ("Katryoshkas") that can be created given a limited number of eyes, mouths, and bodies.
+<details>
+<summary><i><mark><b></b></mark></i></summary>
 
 ### Problem Description
 
+<details>
+<summary></summary>
 To make one Katryoshka, the following combinations of pieces can be used:
 
 1. **2 eyes, 0 mouths, and 1 body**
@@ -108,8 +117,12 @@ The output is a single integer representing the maximum number of Katryoshkas th
 **Output**
 57
 
-## Solution Approach
+</details>
 
+### Solution Approach
+
+<details>
+<summary></summary>
 The solution follows these steps:
 
 1. **Edge Case Check**: If either `eyes` or `body` is zero, we cannot create any dolls because at least one eye and one body are required. The program outputs `0` and exits.
@@ -126,8 +139,9 @@ The solution follows these steps:
    - We add this minimum to the `counter`.
 
 4. **Output Result**: Finally, we output the `counter`, which holds the maximum number of Katryoshkas that can be assembled.
+</details>
 
-## Code Explanation
+### Code
 
 ```cpp
 #include <bits/stdc++.h>
@@ -169,9 +183,12 @@ int main()
 }
 ```
 
+</details>
+
 ## [H_Data_Type_Guessing](H_Data_Type_Guessing.cpp)
 
-`wrong ans1:`
+<details>
+<summary><i>wrong ans 01:</i></summary>
 
 ```cpp
     #include <iostream>
@@ -225,8 +242,10 @@ close
 - Precision Issues: By converting the result back to a long long and comparing it to the original ans, you risk overlooking cases where ans is a fraction. This can cause an incorrect classification as int instead of double.
 
 - Edge Cases: The method fails to handle cases where `n\k `could still produce a double that doesn't fit within the bounds of int.
+</details>
 
-`wrong ans2:`
+<details>
+<summary><i>wrong ans 02:</i></summary>
 
 ```cpp
     double ans = k / (double)a;
@@ -243,8 +262,10 @@ This operation could be problematic:
 - Division First: By dividing k by a first, you may introduce floating-point precision issues. If the result of `k/a is very small`, multiplying by n might not correctly reflect the expected value of n\*k/a.
 - Loss of Precision: This division might lead to `rounding errors or loss of precision`, especially if `a is large`.
 - Type Checking: The condition `if (ans != (long long)ans)` checks if the result is a whole number. If it is not, it outputs double. This is not a safe way to determine if (n\*k/a) could be considered an integer, as floating-point arithmetic can introduce inaccuracies.
+</details>
 
-wrong ans:
+<details>
+<summary><i>wrong ans 03:</i></summary>
 
 ```cpp
     double num1, num2, num3;
@@ -300,6 +321,8 @@ Even below code provide wrong ans:
     if (result == myNumber){...}
 ```
 
+</details>
+
 ## RIGHT Ans:
 
 ```cpp
@@ -317,10 +340,15 @@ Even below code provide wrong ans:
     }
 ```
 
+</details>
+
 ## [I_Lucky_Numbers](I_Lucky_Numbers.cpp)
 
-- Edge case: No number is divisible by 0
-- here 2 digit number --> d1!=0 , but d0=0 is possible so we need to check it
+<details>
+<summary></summary>
+
+- **Edge case:** No number is divisible by 0
+- Here input is 2 digit number. So, d1!=0 but d0=0 is possible so we need to check it
 
 `Wrrong Code:`
 
@@ -341,3 +369,5 @@ Even below code provide wrong ans:
     }
 
 ```
+
+</details>
